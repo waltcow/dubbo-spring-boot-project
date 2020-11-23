@@ -1,0 +1,17 @@
+
+dependencies {
+
+    compile project(":dubbo-api")
+
+    compile "org.springframework.boot:spring-boot-starter:2.4.0"
+
+    compile "org.apache.dubbo:dubbo-spring-boot-starter:2.7.7"
+
+    compile (group: 'org.apache.dubbo', name: 'dubbo', version: '2.7.7') {
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
+
+    compile('org.apache.curator:curator-x-discovery:4.0.1')
+
+    compile('com.alibaba:fastjson:1.2.68')
+}
